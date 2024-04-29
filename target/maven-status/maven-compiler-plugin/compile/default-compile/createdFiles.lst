@@ -1,0 +1,4 @@
+com/example/demo/DemoApplication.class
+com/example/demo/loader/CsvDataLoader.class
+com/example/demo/repository/MovieListRepository.class
+com/example/demo/entity/MovieListEntity.class
