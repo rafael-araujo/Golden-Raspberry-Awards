@@ -36,17 +36,11 @@ public class CsvDatabaseLoader implements ApplicationListener<ContextRefreshedEv
     }
 
     public void processCsvAndSave(String csvFilePath) {
-        try {
-
-            InputStream in = getClass().getResourceAsStream(csvFilePath);
-
-            Reader reader = new InputStreamReader(in);
-
-            CSVParser csvParser = new CSVParser(reader,
-                        CSVFormat.Builder.create()
-                            .setHeader(String.valueOf(true))
-                            .setDelimiter(';')
-                            .build());
+        try (InputStream in = getClass().getResourceAsStream(csvFilePath);
+             Reader reader = new InputStreamReader(in);
+             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT
+                    .withFirstRecordAsHeader()
+                     .withDelimiter(';'))) {
 
             List<MovieAwardEntity> movies = new ArrayList<>();
 

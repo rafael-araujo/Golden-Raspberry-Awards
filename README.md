@@ -13,7 +13,7 @@ Este projeto é uma API RESTful desenvolvida para possibilitar a leitura da list
 
 ### Pré-requisitos
 
-- Java JDK 11 ou superior
+- Java JDK 21 ou superior
 - Maven
 
 ### Passos para Execução
@@ -73,18 +73,8 @@ Este projeto é uma API RESTful desenvolvida para possibilitar a leitura da list
 
 ## Executando Testes de Integração via BASH
 
-Para executar os testes de integração e garantir que a aplicação está funcionando conforme esperado, utilize o seguinte comando:
+- **Para executar os testes de integração e garantir que a aplicação está funcionando conforme esperado, utilize o seguinte comando:**
 
-```bash
-curl http://localhost:8080/api/movie-awards/intervals
-```
-
-## Executando Testes de Integração via Browser
-
-Para executar os testes de integração e garantir que a aplicação está funcionando conforme esperado, acesse o link abaixo no seu navegador:
-
-```browser
-http://localhost:8080/api/movie-awards/intervals
-
-```
-
+    ```bash
+    mvn test
+    ```

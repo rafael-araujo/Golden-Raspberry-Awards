@@ -16,8 +16,7 @@ public class MovieAwardController {
     private MovieAwardService service;
 
     @GetMapping("/intervals")
-    public ResponseEntity<AwardIntervalDTO> getIntervals() {
-        AwardIntervalDTO intervals = service.calculateAwardIntervals();
-        return ResponseEntity.ok(intervals);
+    public ResponseEntity<?> getIntervals() {
+        return service.calculateAwardIntervals();
     }
 }
